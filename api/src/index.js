@@ -26,7 +26,7 @@ const routes =
         
         response.end();
     },
-    default: (response)=>
+    default: (request,response)=>
     {
         response.writeHead(404,HEADER)
         response.write('Rota não localizada! :(');
