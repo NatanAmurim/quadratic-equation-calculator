@@ -24,8 +24,5 @@ class QuadraticEquationService
             }
     }
 }
-module.exports = EquationService
-const a = new EquationService({ValueA:'a', ValueB:2,ValueC:3});
-console.log(a.calculate());
-
+module.exports = QuadraticEquationService
 

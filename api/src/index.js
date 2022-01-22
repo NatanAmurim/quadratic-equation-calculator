@@ -3,7 +3,7 @@ const QuadraticEquationService = require('./services/QuadraticEquationService');
 
 //Basic configurations
 const http = require('http');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const HEADER = {'Content-Type':'application/json'};
 
 const routes = 
