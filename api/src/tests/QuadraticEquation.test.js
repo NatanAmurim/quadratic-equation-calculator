@@ -37,14 +37,14 @@ test('Deve retornar mensagem informando que não há raíz', () =>{
     let equation =  new QuadraticEquation(4,-4,2);;
     const result = equation.calculateEquation(); 
         
-    expect(result).toContain('Não há raíz');
+    expect(result.Notificacao).toContain('Não há raíz');
 });
 
 test('Deve retornar mensagem informando que o valor A não está correto.', () =>{    
     let equation =  new QuadraticEquation(0,-4,2);;
     const {valid, result} = equation.isValid();  
         
-    expect(result.toString()).toContain('valor A');
+    expect(result[0].Notificacao).toContain('valor A');
 });
 
 
