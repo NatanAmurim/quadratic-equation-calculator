@@ -12,13 +12,13 @@ class QuadraticEquation
         let notifications = [];     
 
         if (isNaN(this.valueA) || this.valueA === 0)
-            notifications.push('O valor A não é válido ou não foi informado corretamente!');
+            notifications.push({'Notificacao':'O valor A não é válido ou não foi informado corretamente!'});
 
         if (isNaN(this.valueB))
-            notifications.push('O valor B não é válido ou não foi informado corretamente!');
+            notifications.push({'Notificacao':'O valor B não é válido ou não foi informado corretamente!'});
 
         if (isNaN(this.valueC))
-            notifications.push('O valor C não é válido ou não foi informado corretamente!');
+            notifications.push({'Notificacao':'O valor C não é válido ou não foi informado corretamente!'});
         
         return{
             valid: notifications.length === 0,
@@ -47,7 +47,7 @@ class QuadraticEquation
             return {
                 x1: ( -(this.valueB) - Math.sqrt(delta)) / (2 * this.valueA),
                 x2: ( -(this.valueB) + Math.sqrt(delta)) / (2 * this.valueA)            
-        }
+            }
     }
 }
 

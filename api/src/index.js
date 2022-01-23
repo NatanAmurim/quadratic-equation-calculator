@@ -40,7 +40,7 @@ const routes =
                 response.writeHead(500);
                 response.end('Api calculadora de equação de segundo grau.');
                 return;
-            });                                                        
+        });                                                        
     }
 }
 
