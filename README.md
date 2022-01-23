@@ -39,6 +39,7 @@ NodeJs 16.13.1
 ### Rodar a aplicação
 
 - Via terminal, basta digitar o comando npm start
+
 Obs: Para rodar os testes, basta digitar npm test
 
  
