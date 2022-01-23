@@ -37,7 +37,7 @@ class QuadraticEquation
         const delta = this.calculateDelta();
 
         if (delta < 0)
-            return 'Não há raíz, meu amor :(';
+            return {'Notificacao':'Não há raíz, meu amor :('};
         else if (delta === 0)
         {
             return { x: ( - (this.valueB) - Math.sqrt(delta)) / (2 * this.valueA) };
