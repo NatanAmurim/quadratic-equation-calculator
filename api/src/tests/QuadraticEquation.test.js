@@ -40,4 +40,11 @@ test('Deve retornar mensagem informando que não há raíz', () =>{
     expect(result).toContain('Não há raíz');
 });
 
+test('Deve retornar mensagem informando que o valor A não está correto.', () =>{    
+    let equation =  new QuadraticEquation(0,-4,2);;
+    const {valid, result} = equation.isValid();  
+        
+    expect(result.toString()).toContain('valor A');
+});
+
 

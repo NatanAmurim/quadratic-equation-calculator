@@ -11,7 +11,7 @@ class QuadraticEquation
     {   
         let notifications = [];     
 
-        if (isNaN(this.valueA || this.valueA === 0))
+        if (isNaN(this.valueA) || this.valueA === 0)
             notifications.push('O valor A não é válido ou não foi informado corretamente!');
 
         if (isNaN(this.valueB))
