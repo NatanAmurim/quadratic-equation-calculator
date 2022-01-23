@@ -37,7 +37,7 @@ class QuadraticEquation
         const delta = this.calculateDelta();
 
         if (delta < 0)
-            return 'Não tem raíz, meu amor :(';
+            return 'Não há raíz, meu amor :(';
         else if (delta === 0)
         {
             return { x: ( - (this.valueB) - Math.sqrt(delta)) / (2 * this.valueA) };
@@ -63,7 +63,7 @@ module.exports = QuadraticEquation
 //const teste = new QuadraticEquation(1,5,-374);
 
 //Com valor inválido
-// const teste = new QuadraticEquation('a','a','a');
+//const teste = new QuadraticEquation('a','a','a');
 // if (teste.isValid().valid)
 // {
 //     console.log(teste.calculateEquation());

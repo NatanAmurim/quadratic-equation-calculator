@@ -1,5 +1,6 @@
 //Imports
 const QuadraticEquationService = require('./services/QuadraticEquationService');
+const fs = require('fs');
 
 //Basic configurations
 const http = require('http');
@@ -27,10 +28,10 @@ const routes =
         response.end();
     },
     default: (request,response)=>
-    {
-        response.writeHead(404,HEADER)
-        response.write('Rota não localizada! :(');
-        response.end();
+    {   
+        response.writeHead(200,{'Content-Type': 'text/html'});          
+        response.write('Api equacao segundo grau.');
+        response.end();                          
     }
 }
 
