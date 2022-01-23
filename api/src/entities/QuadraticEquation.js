@@ -52,21 +52,3 @@ class QuadraticEquation
 }
 
 module.exports = QuadraticEquation
-
-//Sem raíz
-//const teste = new QuadraticEquation(4,-4,2);
-
-//Com uma raíz
-//const teste = new QuadraticEquation(4,-4,1);
-
-//Com duas raízes
-//const teste = new QuadraticEquation(1,5,-374);
-
-//Com valor inválido
-//const teste = new QuadraticEquation('a','a','a');
-// if (teste.isValid().valid)
-// {
-//     console.log(teste.calculateEquation());
-// }
-// else   
-//     console.log(teste.isValid().error);

@@ -1,6 +1,6 @@
 //Imports
 const QuadraticEquationService = require('./services/QuadraticEquationService');
-const fs = require('fs');
+const fs = require('fs').promises;
 
 //Basic configurations
 const http = require('http');
@@ -9,14 +9,14 @@ const HEADER = {'Content-Type':'application/json'};
 
 const routes = 
 {    
-    'calularEquacao:post': async (request, response)=> 
+    'resolver-equacao:post': async (request, response)=> 
     {        
         for await(const data of request)
         {
             const quadraticEquation = JSON.parse(data);            
             const equationService = new QuadraticEquationService(quadraticEquation);
             const {valid, result} = equationService.calculate();
-           
+
             if (!valid)            
                  response.writeHead(400, HEADER);                             
              else
@@ -29,9 +29,18 @@ const routes =
     },
     default: (request,response)=>
     {   
-        response.writeHead(200,{'Content-Type': 'text/html'});          
-        response.write('Api equacao segundo grau.');
-        response.end();                          
+        response.writeHead(200,{'Content-Type': 'text/html'});           
+        
+        fs.readFile(__dirname + "/views/index.html")
+            .then(html => {            
+                response.writeHead(200);
+                response.end(html);
+            })
+            .catch(err => {
+                response.writeHead(500);
+                response.end('Api calculadora de equação de segundo grau.');
+                return;
+            });                                                        
     }
 }
 

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Equação de segundo grau</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap" rel="stylesheet">
+        <meta charset="utf-8"/>
+        <style>
+            html
+            {
+                margin: 0 auto;
+                background-color: rgb(202, 202, 202);
+                font-family: 'Be Vietnam Pro', sans-serif;
+            }
+            h1
+            {
+                text-align: center;
+            }
+
+            body
+            {
+            background: rgb(63, 62, 62); 
+            width: 45%;
+            margin: 20px auto;
+            color: white;
+            padding: 50px;
+            border-radius: 10px;
+            }
+            
+            a
+            {
+                text-decoration: none;
+                color: white;
+            }
+            a:hover {
+                color: yellow;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <h1>Api calculadora de equação de segundo grau.</h1>
+        <h2>Sobre o projeto</h2>
+        <p>
+            Esta é uma api que realiza o cálculo de equações do segundo grau.<br/> 
+            O projeto foi solicitado pelo grande Mestre de rpg Pedro Alves!
+        </p>
+        <h2>Rota padrão</h2>
+        <p>
+            Por padrão, você será redirecionado para cá, com o tipo de resposta html e status http 200 :)<br/>                      
+        </p>
+        <h2>Endpoints</h2>
+        <p>Abaixo segue lista de enpoints e uma pequena descrição de suas funções.</p>
+        <h3>/resolver-equacao</h3>
+        <p>
+            Este endpoint tem por função realizar o cálculo de uma equação de segundo grau.<br/> 
+            Basta enviar um json como body em sua requisição http contendo os seguintes campos:
+            <ul>
+                <li>'valueA': Tipo numérico. Representa o primeiro valor de uma equação do segundo grau.</li>
+                <li>'valueB': Tipo numérico. Representa o segundo valor de uma equação do segundo grau.</li>
+                <li>'valueC': Tipo numérico. Representa o terceiro valor de uma equação do segundo grau.</li>
+            </ul>
+        </p>
+        <h2>Onde posso ver o projeto?</h2>
+        <p>
+            Caso seja de seu interesse, o projeto encontra-se no github!<br/>
+            Link: <a href="https://github.com/NatanAmurim/quadratic-equation-calculator">Clique aqui para dar uma olhada no código fonte!</a>
+        </p>
+        
+    </body>
+</html>
